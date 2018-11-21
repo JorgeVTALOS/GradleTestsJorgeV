@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'TestStructure'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.testng:testng:6.10'
+    compile 'org.apache.poi:poi:3.9'
+    compile 'org.seleniumhq.selenium:selenium-java:3.14.0'
+    compile 'org.apache.ant:ant:1.10.5'
+    compile 'io.github.bonigarcia:webdrivermanager:3.0.0'
+    compile 'com.codeborne:phantomjsdriver:1.4.4'
+    compile 'nz.ac.waikato.cms.weka:WekaExcel:1.0.6'
+    compile 'org.slf4j:slf4j-api:1.7.5'
+    compile 'org.slf4j:slf4j-simple:1.6.4'
+    compile 'com.aventstack:extentreports:3.1.5'
+}
