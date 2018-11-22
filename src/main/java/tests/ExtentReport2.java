@@ -22,16 +22,21 @@ import java.lang.reflect.Method;
 public class ExtentReport2 {
 
     ExtentReports reports;
-    ExtentTest testInfo;
+    ExtentTest test;
+    ExtentTest testChild;
+    ExtentTest testParentS;
     ExtentHtmlReporter htmlReporter;
     WebDriver driver;
+
+    String rootPath = System.getProperty("user.dir");
+
 
     @BeforeTest
     public void start() {
 
-        htmlReporter = new ExtentHtmlReporter(new File(System.getProperty("user.dir") + "/Reports/AutomationReport.html"));
+        htmlReporter = new ExtentHtmlReporter(new File(rootPath + "/Reports/AutomationReport.html"));
 
-        htmlReporter.loadXMLConfig(new File(System.getProperty("user.dir") + "/Extent-Config.xml"));
+        htmlReporter.loadXMLConfig(new File(rootPath + "/Extent-Config.xml"));
 
         reports = new ExtentReports();
 
@@ -54,7 +59,7 @@ public class ExtentReport2 {
 
         Assert.assertTrue(driver.getTitle().contains("Amazon"));
 
-        testInfo.log(Status.INFO, "This is Acces Test 1");
+        test.log(Status.INFO, "This is Acces Test 1");
 
     }
 
@@ -71,7 +76,7 @@ public class ExtentReport2 {
 
         Assert.assertTrue(driver.getTitle().contains("Google"));
 
-        testInfo.log(Status.INFO, "This is Acces Test 2");
+        test.log(Status.INFO, "This is Acces Test 2");
 
     }
 
@@ -90,7 +95,7 @@ public class ExtentReport2 {
 
         Assert.assertTrue(driver.getTitle().contains("PHPTRAVELS"));
 
-        testInfo.log(Status.INFO, "This is PhantomJS Test 3");
+        test.log(Status.INFO, "This is PhantomJS Test 3");
 
     }
 
@@ -100,7 +105,7 @@ public class ExtentReport2 {
 
         String testName = method.getName();
 
-        testInfo = reports.createTest(testName);
+        test = reports.createTest(testName);
 
     }
 
@@ -112,21 +117,21 @@ public class ExtentReport2 {
 
         if (result.getStatus() == ITestResult.SUCCESS) {
 
-            testInfo.log(Status.PASS, "The Test method named as " + result.getName() + " has PASSED");
+            test.log(Status.PASS, "The Test method named as " + result.getName() + " has PASSED");
 
-            testInfo.pass("SS-"+result.getName(), MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
+            test.pass("SS-"+result.getName(), MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
 
         } else if (result.getStatus() == ITestResult.FAILURE) {
 
-            testInfo.log(Status.FAIL, "The Test method named as " + result.getName() + " has FAILED");
+            test.log(Status.FAIL, "The Test method named as " + result.getName() + " has FAILED");
 
-            testInfo.log(Status.FAIL, "Test Failure : " + result.getThrowable());
+            test.log(Status.FAIL, "Test Failure : " + result.getThrowable());
 
-            testInfo.fail("SS-"+result.getName(), MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
+            test.fail("SS-"+result.getName(), MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
 
         } else if (result.getStatus() == ITestResult.SKIP) {
 
-            testInfo.log(Status.SKIP, "The Test method named as " + result.getName() + " has SKIPPED");
+            test.log(Status.SKIP, "The Test method named as " + result.getName() + " has SKIPPED");
 
         }
 
