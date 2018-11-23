@@ -38,7 +38,8 @@
 		<!-- slideout menu -->
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
-						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
 		<!-- report name -->
@@ -51,7 +52,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Nov 22, 2018 10:46:11 AM</span>
+                    <span class='label suite-start-time blue darken-3'>Nov 23, 2018 08:32:57 AM</span>
 				</a>
 			</li>
 			<li>
@@ -84,6 +85,16 @@
 			<!-- test toggle -->
 
 			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>FunctionalTesting</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
 			<!-- category toggle -->
 
 			<!-- clear filters -->
@@ -142,10 +153,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='66.667%'><span class='strong'>6</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>15</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>3</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -160,134 +171,168 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>accessTest2</span>
-						<span class='test-time'>Nov 22, 2018 10:46:11 AM</span>
+						<span class='test-name'>Testing some Sites with Firefox Driver</span>
+						<span class='test-time'>Nov 23, 2018 08:32:57 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Nov 22, 2018 10:46:11 AM</span>
-	<span class='label end-time'>Nov 22, 2018 10:46:19 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+229ms</span>
+	<span class='label start-time'>Nov 23, 2018 08:32:57 AM</span>
+	<span class='label end-time'>Nov 23, 2018 08:33:37 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 40s+3ms</span>
 </div>
-	<div class='test-steps'>
-		<table class='bordered table-results'>
-			<thead>
-				<tr>
-					<th>Status</th>
-					<th>Timestamp</th>
-					<th>Details</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>10:46:19 AM</td>
-					<td class='step-details'>This is Acces Test 2</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:46:19 AM</td>
-					<td class='step-details'>The Test method named as accessTest2 has PASSED</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:46:19 AM</td>
-					<td class='step-details'>SS-accessTest2<img data-featherlight='/Users/jorgevelasquez/IdeaProjects/TestsJV/Screenshots/accessTest2.png' width='10%' src='/Users/jorgevelasquez/IdeaProjects/TestsJV/Screenshots/accessTest2.png' data-src='/Users/jorgevelasquez/IdeaProjects/TestsJV/Screenshots/accessTest2.png'></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='2'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>accessTest1</h5>
+						<span class="node-time label grey lighten-1 white-text">Nov 23, 2018 08:33:15 AM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 17s+247ms</span>
+						<span class='test-status right pass'>pass</span>
+								<span class='category label white-text'>FunctionalTesting</span>
 					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>8:33:09 AM</td>
+													<td class='step-details'><span class='label white-text purple'>Browser opened GeckoDriver.</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>8:33:13 AM</td>
+													<td class='step-details'><span class='label white-text purple'>Website has been opened.</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>8:33:13 AM</td>
+													<td class='step-details'><span class='label white-text purple'>Website title verified.</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>8:33:15 AM</td>
+													<td class='step-details'>The Test method named as accessTest1 has PASSED</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>8:33:15 AM</td>
+													<td class='step-details'>SS-accessTest1<img data-featherlight='/Users/jorgevelasquez/IdeaProjects/TestsJV/Screenshots/accessTest1.png' width='10%' src='/Users/jorgevelasquez/IdeaProjects/TestsJV/Screenshots/accessTest1.png' data-src='/Users/jorgevelasquez/IdeaProjects/TestsJV/Screenshots/accessTest1.png'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
 				</li>
-				
-				
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
-					<div class='test-heading'>
-						<span class='test-name'>accessTest1</span>
-						<span class='test-time'>Nov 22, 2018 10:46:19 AM</span>
+				<li class='node level-1 leaf pass' status='pass' test-id='3'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>accessTest2</h5>
+						<span class="node-time label grey lighten-1 white-text">Nov 23, 2018 08:33:24 AM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 9s+127ms</span>
 						<span class='test-status right pass'>pass</span>
+								<span class='category label white-text'>FunctionalTesting</span>
 					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Nov 22, 2018 10:46:19 AM</span>
-	<span class='label end-time'>Nov 22, 2018 10:46:26 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+325ms</span>
-</div>
-	<div class='test-steps'>
-		<table class='bordered table-results'>
-			<thead>
-				<tr>
-					<th>Status</th>
-					<th>Timestamp</th>
-					<th>Details</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>10:46:25 AM</td>
-					<td class='step-details'>This is Acces Test 1</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:46:26 AM</td>
-					<td class='step-details'>The Test method named as accessTest1 has PASSED</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:46:26 AM</td>
-					<td class='step-details'>SS-accessTest1<img data-featherlight='/Users/jorgevelasquez/IdeaProjects/TestsJV/Screenshots/accessTest1.png' width='10%' src='/Users/jorgevelasquez/IdeaProjects/TestsJV/Screenshots/accessTest1.png' data-src='/Users/jorgevelasquez/IdeaProjects/TestsJV/Screenshots/accessTest1.png'></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>8:33:22 AM</td>
+													<td class='step-details'><span class='label white-text purple'>Browser opened GeckoDriver.</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>8:33:24 AM</td>
+													<td class='step-details'><span class='label white-text purple'>Website has been opened.</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>8:33:24 AM</td>
+													<td class='step-details'><span class='label white-text purple'>Website title verified.</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>8:33:24 AM</td>
+													<td class='step-details'>The Test method named as accessTest2 has PASSED</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>8:33:24 AM</td>
+													<td class='step-details'>SS-accessTest2<img data-featherlight='/Users/jorgevelasquez/IdeaProjects/TestsJV/Screenshots/accessTest2.png' width='10%' src='/Users/jorgevelasquez/IdeaProjects/TestsJV/Screenshots/accessTest2.png' data-src='/Users/jorgevelasquez/IdeaProjects/TestsJV/Screenshots/accessTest2.png'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
 				</li>
-				
-				
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
-					<div class='test-heading'>
-						<span class='test-name'>phantomjsTest</span>
-						<span class='test-time'>Nov 22, 2018 10:46:26 AM</span>
+				<li class='node level-1 leaf pass' status='pass' test-id='4'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>phantomjsTest</h5>
+						<span class="node-time label grey lighten-1 white-text">Nov 23, 2018 08:33:37 AM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 13s+540ms</span>
 						<span class='test-status right pass'>pass</span>
+								<span class='category label white-text'>FunctionalTesting</span>
 					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Nov 22, 2018 10:46:26 AM</span>
-	<span class='label end-time'>Nov 22, 2018 10:46:41 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+293ms</span>
-</div>
-	<div class='test-steps'>
-		<table class='bordered table-results'>
-			<thead>
-				<tr>
-					<th>Status</th>
-					<th>Timestamp</th>
-					<th>Details</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>10:46:40 AM</td>
-					<td class='step-details'>This is PhantomJS Test 3</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:46:41 AM</td>
-					<td class='step-details'>The Test method named as phantomjsTest has PASSED</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:46:41 AM</td>
-					<td class='step-details'>SS-phantomjsTest<img data-featherlight='/Users/jorgevelasquez/IdeaProjects/TestsJV/Screenshots/phantomjsTest.png' width='10%' src='/Users/jorgevelasquez/IdeaProjects/TestsJV/Screenshots/phantomjsTest.png' data-src='/Users/jorgevelasquez/IdeaProjects/TestsJV/Screenshots/phantomjsTest.png'></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>8:33:31 AM</td>
+													<td class='step-details'><span class='label white-text purple'>Headless Browser PhantomJS Opened.</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>8:33:36 AM</td>
+													<td class='step-details'><span class='label white-text purple'>Website has been opened.</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>8:33:36 AM</td>
+													<td class='step-details'><span class='label white-text purple'>Website title verified.</span></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>8:33:37 AM</td>
+													<td class='step-details'>The Test method named as phantomjsTest has PASSED</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>8:33:37 AM</td>
+													<td class='step-details'>SS-phantomjsTest<img data-featherlight='/Users/jorgevelasquez/IdeaProjects/TestsJV/Screenshots/phantomjsTest.png' width='10%' src='/Users/jorgevelasquez/IdeaProjects/TestsJV/Screenshots/phantomjsTest.png' data-src='/Users/jorgevelasquez/IdeaProjects/TestsJV/Screenshots/phantomjsTest.png'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
 					</div>
 				</li>
 			</ul>
@@ -315,6 +360,86 @@
 
 </div>
 <!-- test view -->
+<div id='category-view' class='view hide'>
+
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+				
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Categories</h3>
+			<ul id='category-collection' class='category-collection'>
+				
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>FunctionalTesting</span>
+						<span class='category-status right'>
+							<span class='label pass'>3</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 3</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 23, 2018 08:32:57 AM</td>
+										<td class='linked' test-id='2'>Testing some Sites with Firefox Driver.accessTest1</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Nov 23, 2018 08:33:15 AM</td>
+										<td class='linked' test-id='3'>Testing some Sites with Firefox Driver.accessTest2</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Nov 23, 2018 08:33:24 AM</td>
+										<td class='linked' test-id='4'>Testing some Sites with Firefox Driver.phantomjsTest</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
 <!-- category view -->
 <!-- exception view -->
 <div id='dashboard-view' class='view hide'>
@@ -331,25 +456,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>9</div>
+					<div class='panel-lead'>15</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Nov 22, 2018 10:46:11 AM</div>
+					<div class='panel-lead'>Nov 23, 2018 08:32:57 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Nov 22, 2018 10:46:41 AM</div>
+			 		<div class='panel-lead'>Nov 23, 2018 08:33:37 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 30s+111ms</div>
+					<div class='panel-lead'>0h 0m 40s+289ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -365,6 +490,54 @@
 								<td>Environment</td>
 								<td>QA</td>
 							</tr>
+							<tr>
+								<td>User Name</td>
+								<td>jorgevelasquez</td>
+							</tr>
+							<tr>
+								<td>Time Zone</td>
+								<td>America/Bogota</td>
+							</tr>
+							<tr>
+								<td>Machine</td>
+								<td>Mac OS X-x86_64</td>
+							</tr>
+							<tr>
+								<td>Selenium</td>
+								<td>3.7.0</td>
+							</tr>
+							<tr>
+								<td>Maven</td>
+								<td>3.5.2</td>
+							</tr>
+							<tr>
+								<td>Java Version</td>
+								<td>11.0.1+13-LTS</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+			<div class='col s6'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>FunctionalTesting</td>
+							<td>3</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
 					</table>
 				</div>
 			</div>
@@ -386,13 +559,13 @@
 				skipParent: 0,
 				exceptionsParent: 0,
 				
-				passChild: 6,
+				passChild: 15,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
-				infoChild: 3,
+				infoChild: 0,
 				exceptionsChild: 0,
 				
 				passGrandChild: 0,
